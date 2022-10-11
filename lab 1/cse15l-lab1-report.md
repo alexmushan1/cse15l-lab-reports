@@ -19,6 +19,9 @@ This picture shows part 5, which is trying some commands while you are on the se
 
 ![Image](cse%2015l%20lab%201%20pic%203.png)
 Step 6 is where it gets a little more complicated. First you need to make sure you are logged out using the “exit” command. When you are logged out, you are asked to create a java file called WhereAmI.java with the code provided in the instructions. I created a new folder for cse15l and created the file there. Then you are supposed to test the code locally, which I had an error. Now you will use the “scp'' command to copy this file onto your directory on the server. Provide the file name and where you want to put it then enter your password. Then you have to log in once again to run the code on the server which will show where you are on the server.
+
+![Image](cse%2015l%20lab%201%20pic%206%20resub.png)
+this is the ssh-keygen for step 7. The first time you do this, you will not get the overwrite warning, you should see the key being generated sucessfully.
 ![Image](cse%2015l%20lab%201%20pic%204.png)
 Step 7 you are supposed to set up a ssh key to log in quickly without having to type your password every time you use ssh or scp. You use the command ssh-keygen(no space) to get a key. Then you log in to the server and type mkdir .ssh and log out. Locally you use scp to copy the public key up to the server in your account. Enter password again and it should work now.
 ![Image](cse%2015l%20lab%201%20pic%205.png)
