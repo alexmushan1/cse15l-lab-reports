@@ -4,6 +4,7 @@ Alex Zhang
 
 **part 1** Search Engine
 
+```
 # code block
 import java.io.IOException;
 import java.net.URI;
@@ -63,6 +64,8 @@ class SearchEngine {
         Server.start(port, new Handler());
     }
 }
+```
+
 
 ![Image](cse%2015l%20lab%203%20pt1%20p5.png)
 we first log in using ssh and set up our server.
