@@ -72,10 +72,11 @@ we first log in using ssh and set up our server.
 We have to cd into the write place and compile the code.
 then we can run the server.
 ![Image](CSE%2015l%20lab%203%20pt1%20p1.png)
-handleRequest is called, it reads the URL. reads add and add the word after "=" to a list.
+handleRequest is called, it reads the URL. it will first check the parameter for "/add" then it will check for "s" after that. once those return true, it will take whatever is after the parameter, or the second element in the parameter as a string and store it in a list we previously created. It doesn't matter what you put after "=", it will all be stored as a string. 
 ![Image](CSE%2015l%20lab%203%20pt1%20p2.png)
+this time, we changed the query to shoe instead of key. handlerequest will first look for "/add" then it will look for "=" and split query into 2 elements that is stored in an array called parameter. when add is called, it will take what is the second element in the parameter (which was split by "=") and store the content as a string into the list we have created. It will keep adding onto the list and keep the previous strings added.
 ![Image](CSE%2015l%20lab%203%20pt1%20p3.png)
-continues to add more words.
+continues to add more words. we still call handlerequest and it finds key1 and store that into our list as a string. (the previous 2 elements are still in the list).
 ![Image](CSE%2015l%20lab%203%20pt1%20p4.png)
 Finally if we do search key, we should only see the two words that contains key. Search runs a loop to check the existing words in the arraylist and return a new list with the chosen words.
 
