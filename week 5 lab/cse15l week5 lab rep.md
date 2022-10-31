@@ -67,7 +67,7 @@ technical/plos/journal.pbio.0020067.txt
 technical/plos/journal.pbio.0020068.txt
 ...
 ```
-keeps the outputs instead of clearing it.
+-X will keeps the outputs instead of clearing it when you are done with less.
 
 this is helpful when you want to see the output while working on something else but don't want to keep going back to less to see the results. this keeps the outputs in your terminal.
 
@@ -75,7 +75,7 @@ this is helpful when you want to see the output while working on something else 
 ```
 [cs15lfa22gc@ieng6-202]:docsearch:179$ less -e find-results.txt
 ```
-quit at the end of file after you read through, no need to press q to leave less.
+-e will make you quit at the end of file after you read through, no need to press q to leave less.
 
 this is helpful if you just want to read through the output, it will automatically quit after you are done and then you can continue to work on other things.
 
@@ -179,7 +179,8 @@ find -type f
 ./technical/plos/pmed.0020281.txt
 ...
 ```
-will find everything of this type, in this case f is for file.
+-type [type] will find everything of this type, in this case f is for file.
+
 this is helpful in filtering the type to find. in this case we won't see other types other than file.
 
 ```
@@ -210,6 +211,7 @@ this will find everything under this user name.
 this is helpful in cases where you have diferernt users. you will filter out other user's outputs.
 
 
+grep options:
 ```
 [cs15lfa22gc@ieng6-202]:docsearch:188$ grep -i ".TXt" find-results.txt
 technical/plos/journal.pbio.0020001.txt
