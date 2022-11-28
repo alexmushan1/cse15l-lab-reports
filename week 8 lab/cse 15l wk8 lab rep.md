@@ -48,23 +48,23 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 #echo < output.txt 
 echo
 
-COUNT_FILTER_TEST=$(grep -o "ListExamples.filter(" TestListExamples.java | wc -l)
+FTests=$(grep -o "ListExamples.filter(" TestListExamples.java | wc -l)
 
-COUNT_MERGE_TEST=$(grep -o "ListExamples.merge(" TestListExamples.java | wc -l)
+MTests=$(grep -o "ListExamples.merge(" TestListExamples.java | wc -l)
 
-COUNT_FILTER=$(grep -o "testFilter" output.txt | wc -l)
+Filter=$(grep -o "testFilter" output.txt | wc -l)
 
-COUNT_MERGE=$(grep -o "testMerge" output.txt | wc -l)
+Merge=$(grep -o "testMerge" output.txt | wc -l)
 
-PASSED_FILTER=$(echo "$COUNT_FILTER_TEST-$COUNT_FILTER/2" | bc)
+FPassed=$(echo "$FTests-$Filter/2" | bc)
 
-PASSED_MERGE=$(echo "$COUNT_MERGE_TEST-$COUNT_MERGE/2" | bc)
+MPassed=$(echo "$MTests-$Merge/2" | bc)
 
-echo "you passed $PASSED_FILTER out of $COUNT_FILTER_TEST test for filter() method!"
+echo "you passed $FPassed out of $FTests test for filter() method!"
 
 echo
 
-echo "you passed $PASSED_MERGE out of $COUNT_MERGE_TEST for merge() method!"
+echo "you passed $MPassed out of $MTests for merge() method!"
 ```
 
 
